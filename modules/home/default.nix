@@ -7,6 +7,7 @@
   imports = [
     ./shellPackages.nix
     ./bash.nix
+    ./neovim
   ];
 
   config = {

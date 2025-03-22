@@ -16,6 +16,12 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-vim = {
+      url = "github:nix-community/nix-vim";
+
+      inputs.nixpkgs.follows = "nixpkgs";
+   
   };
 
   outputs = {
@@ -24,6 +30,7 @@
     home-manager,
     nix-index-database,
     catppuccin,
+    nixvim,
     ...
   }: let
     system = "x86_64-linux";
@@ -32,6 +39,7 @@
     homeManagerModules = [
       ./home-manager
       catppuccin.homeManagerModules.catppuccin
+      nixvim.homeManagerModules.nixvim
 
       nix-index-database.hmModules.nix-index
 
